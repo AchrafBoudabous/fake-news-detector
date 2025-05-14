@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fake News Detector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icons/icon48.png" alt="Fake News Detector Icon" class="header-icon">
+      <h1>Fake News Detector</h1>
+    </header>
+    
+    <div id="loading" class="hidden">
+      <p>Analyzing content...</p>
+      <div class="spinner"></div>
+    </div>
+    
+    <div id="results" class="hidden">
+      <div id="result-indicator" class="indicator"></div>
+      <h2 id="result-title">Analysis Results</h2>
+      <p id="result-message"></p>
+      <div class="confidence-meter">
+        <div class="confidence-bar">
+          <div id="confidence-level"></div>
+        </div>
+        <p>Confidence: <span id="confidence-percentage">0%</span></p>
+      </div>
+      <p class="disclaimer">This is an AI-based prediction and may not always be accurate. Always verify information from multiple reliable sources.</p>
+    </div>
+    
+    <div id="no-content">
+      <p>Navigate to a news article or highlight text to analyze it for potential misinformation.</p>
+      <button id="analyze-page">Analyze Current Page</button>
+    </div>
+    
+    <div class="footer">
+      <p>Powered by <a href="https://huggingface.co" target="_blank">Hugging Face</a> ML models</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
